@@ -24,4 +24,11 @@ yum install -y inotify-tools
 /usr/bin/inotifywait 实现对数据目录信息变化监控
 /usr/bin/inotifywatch 监控变化，对变化数据进行统计
 
-</pre><p><br></p><p>我们还是希望rsync以后台方式运行</p><p><br></p><p><br></p>
+</pre><p><br></p><p class="ql-align-justify">安装完成inotify—tools工具之后，会产生两条命令：</p><p class="ql-align-justify"><span style="background-color: rgb(230, 0, 0);">inotifywait：用于持续监控，实时输出结果；</span></p><p class="ql-align-justify">inotifywatch：用于短期监控，任务完成后再出结果。</p><pre class="ql-syntax ql-align-justify" spellcheck="false">命令所使用的参数有：
+-m，持续进行监控
+-r，递归监控所有子对象
+-q，简化输出信息
+-e，指定要监控哪些事件类型
+</pre><blockquote class="ql-align-justify">关于命令的详细用法可以参考其man手册！</blockquote><p class="ql-align-justify">以监控网站根目录为例：</p><p class="ql-align-justify"><br></p><pre class="ql-syntax ql-align-justify" spellcheck="false">[root@localhost ~]# inotifywait -mrq -e modify,move,create,delete,attrib /var/www/html
+//以递归、持续监控整个目录的修改、移动、创建、删除、属性变更等各种事件
+</pre><p><br></p><p><br></p><p><br></p>

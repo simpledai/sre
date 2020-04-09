@@ -1,4 +1,23 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-756a7312-e3a4-4016-9fc3-997aa59b3902"></attachment><h3>RSYNC+INOTIFY</h3><p><br></p><p><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51);">Rsync+inotify的工作原理是，源机器上的inotify实时监控主机上的某目录，如果发现有增删改的操作就把相应文件使用rsync推送到相应客户机上</span></p><p><br></p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-756a7312-e3a4-4016-9fc3-997aa59b3902"></attachment><h3>RSYNC+INOTIFY</h3><p><br></p><p><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51);">Rsync+inotify的工作原理是，源机器上的inotify实时监控主机上的某目录，如果发现有增删改的操作就把相应文件使用rsync推送到相应客户机上</span></p><p><br></p><p><br></p><pre class="ql-syntax ql-align-justify" spellcheck="false">配置inotify+rsync实时同步大致分为4步：
+（1）调整inotify内核参数；
+（2）安装inotify-tools软件包；
+（3）编写触发式同步脚本；
+（4）测试实验效果。
+</pre><p><br></p><p><br></p><h4 class="ql-align-justify">1.调整inotify内核参数</h4><p><br></p><p class="ql-align-justify">在Linux内核中，默认的inotify机制提供了三个调控参数：</p><p class="ql-align-justify">（1）max_queue_events：监控队列大小（操作事件）；</p><p class="ql-align-justify">（2）max_user_instances：最多监控实例数（监控目录）；</p><p class="ql-align-justify">（3）max_user_watches：每个实例最多监控文件数。</p><pre class="ql-syntax ql-align-justify" spellcheck="false">[root@localhost ~]# cat /proc/sys/fs/inotify/max_queued_events 
+16384
+[root@localhost ~]# cat /proc/sys/fs/inotify/max_user_instances 
+128
+[root@localhost ~]# cat /proc/sys/fs/inotify/max_user_watches 
+8192
+//系统的默认值，如果有需要可以自行修改！
+[root@localhost ~]# vim /etc/sysctl.conf
+                     …………                //省略部分注释内容
+fs.inotify.max_queued_events = 16384
+fs.inotify.max_user_instances = 1024
+fs.inotify.max_user_watches = 1048576
+[root@localhost ~]# sysctl -p
+//立即生效
+</pre><p class="ql-align-justify"><strong>通常情况下，监控所设的值建议大于监控目标的总文件数！</strong></p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">
 yum install -y inotify-tools
 
 [root@10-27-0-219 ~]# rpm -ql inotify-tools

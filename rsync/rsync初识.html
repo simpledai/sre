@@ -1,4 +1,4 @@
-<h3>RSYNC+INOTIFY</h3><p><br></p><p><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51);">Rsync+inotify的工作原理是，源机器上的inotify实时监控主机上的某目录，如果发现有增删改的操作就把相应文件使用rsync推送到相应客户机上</span></p><h3><br></h3><p><br></p><attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-756a7312-e3a4-4016-9fc3-997aa59b3902"></attachment><p><br></p><pre class="ql-syntax" spellcheck="false">
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-756a7312-e3a4-4016-9fc3-997aa59b3902"></attachment><h3>RSYNC+INOTIFY</h3><p><br></p><p><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51);">Rsync+inotify的工作原理是，源机器上的inotify实时监控主机上的某目录，如果发现有增删改的操作就把相应文件使用rsync推送到相应客户机上</span></p><p><br></p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">
 yum install -y inotify-tools
 
 [root@10-27-0-219 ~]# rpm -ql inotify-tools

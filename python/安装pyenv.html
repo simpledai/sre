@@ -1,0 +1,14 @@
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-b2e02c63-5761-4fa2-ac9a-d26957e4f247"></attachment><p>安装pip</p><pre class="ql-syntax" spellcheck="false">	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+	python get-pip.py
+</pre><p><br></p><p>安装pyenv</p><pre class="ql-syntax" spellcheck="false">	参考：https://github.com/pyenv/pyenv/blob/master/README.md#installation
+	安装一下依赖尤其是epel，紧接着安装python
+	yum -y install wget gcc epel-release git 
+	yum install bzip2-devel bzip2-libs -y
+	yum install openssl openssl-devel openssl-static -y
+	git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+	echo 'export PYENV_ROOT="$HOME/.pyenv"' &gt;&gt; ~/.bash_profile
+	echo 'export PATH="$PYENV_ROOT/bin:$PATH"' &gt;&gt; ~/.bash_profile
+	echo -e 'if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval "$(pyenv init -)"\nfi' &gt;&gt; ~/.bash_profile
+	重启shell
+	pyenv install 3.6.1
+</pre><p><br></p><p><br></p><p>安装virtualenv</p><p>	pip install virtualenv </p><p><br></p><p><br></p><p>安装pyenv-virtualenv插件</p><p>	参考：https://github.com/pyenv/pyenv-virtualenv</p><p>	git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv</p><p>	echo 'eval "$(pyenv virtualenv-init -)"' &gt;&gt; ~/.bash_profile</p><p><br></p><p><strong style="background-color: rgb(250, 226, 32); color: rgb(223, 64, 42);">重启shell命令：exec "$SHELL"</strong></p><p>创建一个项目目录/opt/simple，将此目录python环境设置成3.6.1</p><p><br></p><p>	创建虚拟python环境</p><p>		pyenv virtualenv 3.6.1 venv36</p><p>		</p><p>	查看现在有的虚拟环境</p><p>	[root@tingyun_server opt]# pyenv virtualenvs</p><p>	3.6.1/envs/venv36 (created from /root/.pyenv/versions/3.6.1)</p><p>	venv36 (created from /root/.pyenv/versions/3.6.1)</p><p>	</p><p>	进入/opt 设置local python 环境</p><p>	pyenv local venv36</p><p>之后进入目录就自动切换了</p><p><br></p>

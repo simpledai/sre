@@ -18,4 +18,45 @@ Available Commands:
 &nbsp;join-defaults Print default join configuration, that can be used for 'kubeadm join'
 
 可以查看很多kubeadm的相关命令
-</pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
+</pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">[root@node01 opt]# kubeadm config&nbsp;print init-defaults
+W0410 12:39:55.823606&nbsp;&nbsp;30988 validation.go:28] Cannot validate kube-proxy config - no validator is available
+W0410 12:39:55.823705&nbsp;&nbsp;30988 validation.go:28] Cannot validate kubelet config - no validator is available
+apiVersion: kubeadm.k8s.io/v1beta2
+bootstrapTokens:
+- groups:
+&nbsp;- system:bootstrappers:kubeadm:default-node-token
+&nbsp;token: abcdef.0123456789abcdef
+&nbsp;ttl: 24h0m0s
+&nbsp;usages:
+&nbsp;- signing
+&nbsp;- authentication
+kind: InitConfiguration
+localAPIEndpoint:
+&nbsp;advertiseAddress: 1.2.3.4
+&nbsp;bindPort: 6443
+nodeRegistration:
+&nbsp;criSocket: /var/run/dockershim.sock
+&nbsp;name: node01.abc.com
+&nbsp;taints:
+&nbsp;- effect: NoSchedule
+&nbsp;&nbsp;key: node-role.kubernetes.io/master
+---
+apiServer:
+&nbsp;timeoutForControlPlane: 4m0s
+apiVersion: kubeadm.k8s.io/v1beta2
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager: {}
+dns:
+&nbsp;type: CoreDNS
+etcd:
+&nbsp;local:
+&nbsp;&nbsp;dataDir: /var/lib/etcd
+imageRepository: k8s.gcr.io
+kind: ClusterConfiguration
+kubernetesVersion: v1.17.0
+networking:
+&nbsp;dnsDomain: cluster.local
+&nbsp;serviceSubnet: 10.96.0.0/12
+scheduler: {}
+</pre><p><br></p>

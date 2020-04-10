@@ -59,4 +59,4 @@ networking:
 &nbsp;dnsDomain: cluster.local
 &nbsp;serviceSubnet: 10.96.0.0/12
 scheduler: {}
-</pre><p><br></p><p><br></p><p>K8s主要有三个网络</p><p>1）pod网络</p><p>2）节点网络，也叫主机网络</p><p>3）k8s中service网络，serviceSubnet：默认是10.96.0.0/12 </p><p><br></p><p>k8s使用第三方网络插件来实现网络功能</p><p>flannel 10.244.0.0/16</p><p>calico: 192.168.0.0/16 </p><p><br></p><p><br></p><p><br></p><h3>kubeadm 功能</h3><p><br></p><p>kubeadm config images list 列出现在你需要的镜像</p><p>kubeadm config images pull  把你需要的镜像拉下来</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
+</pre><p><br></p><p><br></p><p>K8s主要有三个网络</p><p>1）pod网络</p><p>2）节点网络，也叫主机网络</p><p>3）k8s中service网络，serviceSubnet：默认是10.96.0.0/12 </p><p><br></p><p>k8s使用第三方网络插件来实现网络功能</p><p>flannel 10.244.0.0/16</p><p>calico: 192.168.0.0/16 </p><p><br></p><p><br></p><p><br></p><h3>kubeadm 功能</h3><p><br></p><p>kubeadm config images list 列出现在你需要的镜像</p><p>kubeadm config images pull  把你需要的镜像拉下来</p><p><br></p><p><br></p><p><br></p><p>最后集群搭建好之后在node节点上不能查看</p><p>kubectl get nodes</p><p><br></p><p><br></p><p><br></p>

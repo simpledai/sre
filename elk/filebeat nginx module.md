@@ -20,11 +20,9 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 2.开启具体模块
 	./filebeat modules enable nginx
 
-3. 设置初识化环境
-	./filebeat setup -e
 
 
-4. 设置模块的具体参数及收取路径
+3. 设置模块的具体参数及收取路径
    cd /opt/filebeat/modules.d
    vim nginx.yml 
 
@@ -45,6 +43,11 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
     #var.paths:
 
 ```
+
+
+4. 设置初识化环境
+	./filebeat setup -e
+
 
 5.设置filebeat主配置文件
 

@@ -80,7 +80,8 @@ setup.kibana:
 ```
 
 ### 注意点2:
-如果
+如果我们如果使用上面的filebeat主配置文件，那么你的index name 就是 
+
 
 
 

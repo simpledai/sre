@@ -14,7 +14,17 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html
 
 
 
+```
+output.elasticsearch:
+  hosts: ["myEShost:9200"]
+  username: "filebeat_internal"
+  password: "YOUR_PASSWORD" 
+setup.kibana:
+  host: "mykibanahost:5601"
+  username: "my_kibana_user"  
+  password: "YOUR_PASSWORD"
 
 
+```
 
 

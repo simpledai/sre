@@ -25,7 +25,9 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 	./filebeat setup -e
 
 
-
+4. 设置模块的具体参数
+   	cd /opt/filebeat/modules.d
+	
 
 
 

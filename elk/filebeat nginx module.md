@@ -80,6 +80,7 @@ setup.kibana:
 ```
 
 ### 注意点2:
+
 如果我们如果使用上面的filebeat主配置文件，那么你的index name 就是 filebeat-7.3.2-2020.04.17-000001 这种格式的
 不建议改这个index名称，如果修改
 ** 需要修改kibana和es配置 **

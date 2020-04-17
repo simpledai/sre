@@ -26,8 +26,28 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 
 
 4. 设置模块的具体参数
-   	cd /opt/filebeat/modules.d
-	
+   cd /opt/filebeat/modules.d
+   vim nginx.yml 
+
+```- module: nginx
+  # Access logs
+  access:
+    enabled: true
+
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    var.paths: ["/usr/local/openresty/nginx/logs/*_access.log*"]
+
+  error:
+    enabled: false
+    var.paths: ["/usr/local/openresty/nginx/logs/www.cbibank.com_error.log*"]
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    #var.paths:
+
+```
+
+          
 
 
 

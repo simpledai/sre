@@ -4,7 +4,8 @@ filebeat我们有很多方式收集日志
 
 所以filebeat提供了更简单的方式：** module **
 
-看一下官网
+看一下官网描述
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html
 
 
 

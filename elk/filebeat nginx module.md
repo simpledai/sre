@@ -18,7 +18,10 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html
 ./filebeat modules list 
 
 2.开启具体模块
+./filebeat modules enable nginx
 
+3. 设置初识化环境
+	./filebeat setup -e
 
 
 

@@ -47,9 +47,21 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 
 ```
 
-5.设置filebeat主
-          
+5.设置filebeat主配置文件
 
+[root@ip-10-1-4-11 filebeat]# cat nginx-access.yml 
+filebeat.inputs:
+setup.template.settings:
+  index.number_of_shards: 2
+
+filebeat.config.modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: true
+output.elasticsearch:
+    hosts: ["10.2.12.31:9200","10.2.12.32:9200","10.2.12.33:9200"]
+setup.kibana:
+  host: "mykibanahost:5601"
+      
 
 
 

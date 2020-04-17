@@ -63,11 +63,19 @@ setup.kibana:
       
 
 
-之后启动filebeat
+6.之后启动filebeat
 
 但是这里我们要注意一个问题，我们如果是自定义的nginx日志格式呢？
 答案：会有一定机率出现匹配错误，并且kibana不能很好显示，所以我们就用nginx默认日志格式就好
 我们使用的日志格式是：
+
+```shell
+    log_format main '$remote_addr - $remote_user [$time_local] '
+                       '"$request" $status $bytes_sent '
+                       '"$http_referer" "$http_user_agent" "$gzip_ratio"'
+                       '"$http_x_forwarded_for" "$http_x_real_forwarded_for"';
+```
+
 
 
 

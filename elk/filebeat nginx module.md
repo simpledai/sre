@@ -6,7 +6,6 @@ filebeat我们有很多方式收集日志
 
 看一下官网描述
 
-
 Filebeat provides a set of pre-built modules that you can use to rapidly implement and deploy a log monitoring solution, complete with sample dashboards and data visualizations (when available), in about 5 minutes. These modules support common log formats, such as Nginx, Apache2, and MySQL, and can be run by issuing a simple command.
 
 具体模块链接：
@@ -64,18 +63,8 @@ setup.kibana:
       
 
 
+之后启动filebeat
 
-```
-output.elasticsearch:
-  hosts: ["myEShost:9200"]
-  username: "filebeat_internal"
-  password: "YOUR_PASSWORD" 
-setup.kibana:
-  host: "mykibanahost:5601"
-  username: "my_kibana_user"  
-  password: "YOUR_PASSWORD"
-
-
-```
+但是这里我们要注意一个问题，我们如果是自定义的nginx日志格式呢？
 
 

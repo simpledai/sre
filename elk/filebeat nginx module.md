@@ -80,7 +80,7 @@ setup.kibana:
 ```
 
 ### 注意点2:
-如果我们要修改filebeat的修改目标
+如果
 
 
 

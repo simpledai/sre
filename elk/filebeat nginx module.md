@@ -45,9 +45,8 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 ```
 
 
-4. 设置初识化环境
+3. 设置初识化环境
 	./filebeat setup -e
-
 
 5.设置filebeat主配置文件
 

@@ -4,8 +4,7 @@ filebeat我们有很多方式收集日志
 
 所以filebeat提供了更简单的方式：** module **
 
-
-
+看一下官网
 
 
 

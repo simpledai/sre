@@ -17,6 +17,8 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html
 1.查看filebeat开启了哪些模块
 ./filebeat modules list 
 
+2.开启具体模块
+
 
 
 

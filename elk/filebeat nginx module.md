@@ -25,7 +25,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 	./filebeat setup -e
 
 
-4. 设置模块的具体参数
+4. 设置模块的具体参数及收取路径
    cd /opt/filebeat/modules.d
    vim nginx.yml 
 
@@ -47,6 +47,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quicksta
 
 ```
 
+5.设置filebeat主
           
 
 

@@ -13,15 +13,17 @@ Filebeat provides a set of pre-built modules that you can use to rapidly impleme
 https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html
 
 我们拿nginx 模快来说：
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-quickstart.html
 
 1.查看filebeat开启了哪些模块
-./filebeat modules list 
+	./filebeat modules list 
 
 2.开启具体模块
-./filebeat modules enable nginx
+	./filebeat modules enable nginx
 
 3. 设置初识化环境
 	./filebeat setup -e
+
 
 
 

@@ -65,6 +65,9 @@ setup.kibana:
 
 6.之后启动filebeat
 
+
+### 注意点1：
+
 但是这里我们要注意一个问题，我们如果是自定义的nginx日志格式呢？
 答案：会有一定机率出现匹配错误，并且kibana不能很好显示，所以我们就用nginx默认日志格式就好
 我们使用的日志格式是：
@@ -76,6 +79,8 @@ setup.kibana:
                        '"$http_x_forwarded_for" "$http_x_real_forwarded_for"';
 ```
 
+### 注意点2:
+如果我们要修改filebeat的修改目标
 
 
 

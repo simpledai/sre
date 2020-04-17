@@ -60,7 +60,7 @@ filebeat.config.modules:
 output.elasticsearch:
     hosts: ["10.2.12.31:9200","10.2.12.32:9200","10.2.12.33:9200"]
 setup.kibana:
-  host: "mykibanahost:5601"
+  host: "10.1.1.21:5601"
       
 
 

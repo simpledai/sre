@@ -41,5 +41,6 @@ The user Metricbeat uses when collecting and storing monitoring information in E
 
 
 ** 设置密码 **
-
+密码我们可以通过交互式的方式查看
 bin/elasticsearch-setup-passwords kibana
+

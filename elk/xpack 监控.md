@@ -12,5 +12,6 @@ just install the X-Pack for the Elasticsearch version you’re running)
 X-Pack是Elastic技术栈的扩展，它集安全，提醒，监控，报表以及图标功能于一体。
 
 
-xpack有很多功能，比如说：监控、安全等
+xpack有很多功能，比如说：安全、告警、监控(监控是指监控自身)
+
 

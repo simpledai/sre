@@ -19,9 +19,9 @@ xpack.security.enabled
 
 ```
 
-设置elasticsearch的用户名和密码
+** 设置elasticsearch的用户名和密码 ** 
 
-es有很多build-in user ，就是内置用户
+** es有很多build-in user ，就是内置用户 ** 
 
 说明如下：
 https://www.elastic.co/guide/en/elasticsearch/reference/7.6/built-in-users.html
@@ -40,4 +40,6 @@ remote_monitoring_user
 The user Metricbeat uses when collecting and storing monitoring information in Elasticsearch. It has the remote_monitoring_agent and remote_monitoring_collector built-in roles.
 
 
-设置密码
+** 设置密码 **
+
+bin/elasticsearch-setup-passwords kibana

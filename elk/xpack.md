@@ -17,6 +17,5 @@ X-Pack是Elastic技术栈的扩展，它集安全，提醒，监控，报表以�
 ```language
 xpack.security.enabled
 
-
 ```
 

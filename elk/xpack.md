@@ -19,3 +19,4 @@ xpack.security.enabled
 
 ```
 
+设置elasticsearch的用户名和密码

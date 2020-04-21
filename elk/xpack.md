@@ -39,3 +39,5 @@ The user the APM server uses when storing monitoring information in Elasticsearc
 remote_monitoring_user
 The user Metricbeat uses when collecting and storing monitoring information in Elasticsearch. It has the remote_monitoring_agent and remote_monitoring_collector built-in roles.
 
+
+设置密码

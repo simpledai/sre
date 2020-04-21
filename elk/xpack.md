@@ -13,4 +13,10 @@ X-Pack是Elastic技术栈的扩展，它集安全，提醒，监控，报表以�
 
 在Elasticsearch 5.0之前，你必须单独安装Shield插件，还要配套Watcher, Marvel等插件，现在X-Pack把它们都整合到一块儿了
 
-修改
+修改elasticsearch.yml 
+```language
+xpack.security.enabled
+
+
+```
+

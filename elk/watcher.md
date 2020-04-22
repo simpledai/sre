@@ -11,5 +11,7 @@ https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html#watcher-create-thresh
 还有一种是advanced watch （高级的）
 
 一个最简单的入门级例子：
+简单的太简单，甚至不能处理一些查询字段的关键字报警的操作，所以我们还是直接来一个稍微难一点的
+
 
 

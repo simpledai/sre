@@ -46,7 +46,8 @@ https://www.elastic.co/guide/en/elasticsearch/reference/7.3/watcher-api-put-watc
 删除一个watcher
 DELETE _watcher/watch/log_error_watch
 
-
+禁用一个watcher
+PUT _watcher/watch/my-watch?active=false
 
 创建一个watcher
 PUT _watcher/watch/test

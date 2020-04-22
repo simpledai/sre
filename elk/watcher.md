@@ -101,3 +101,17 @@ PUT _watcher/watch/test
 https://www.elastic.co/guide/en/elasticsearch/reference/7.3/actions-email.html#configuring-email
  
 Watcher can send email using any SMTP email service.
+
+
+我们打开email
+xpack.notification.email.account:
+    new4g_account:
+        profile: new4g
+        smtp: 
+            auth: true
+            starttls.enable: true
+            host: smtp.exmail.qq.com
+            port: 465
+            user: dailiang@new4g.cn
+
+

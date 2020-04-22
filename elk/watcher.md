@@ -10,6 +10,16 @@ The alerting features provide an API for creating, managing and testing watches.
 A watch describes a single alert and can contain multiple notification actions
 
 
+A watch is constructed from four simple building blocks:
+一个watch 是由以下几个部分组成的：
+Schedule
+A schedule for running a query and checking the condition.
+Query
+The query to run as input to the condition. Watches support the full Elasticsearch query language, including aggregations.
+Condition
+A condition that determines whether or not to execute the actions. You can use simple conditions (always true), or use scripting for more sophisticated scenarios.
+Actions
+One or more actions, such as sending email, pushing data to 3rd party systems through a webhook, or indexing the results of the query.
 
 通过帮助手册我们可以看到我们可以创建两种类型的watcher
 一种是比较简单的叫做 threshold watch （入门级的watch）

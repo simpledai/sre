@@ -5,6 +5,11 @@ https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html
 
 https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html#watcher-create-threshold-alert
 
+一个watch是如何工作的：
+The alerting features provide an API for creating, managing and testing watches.
+A watch describes a single alert and can contain multiple notification actions
+
+
 
 通过帮助手册我们可以看到我们可以创建两种类型的watcher
 一种是比较简单的叫做 threshold watch （入门级的watch）
@@ -17,6 +22,6 @@ https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html#watcher-create-thresh
 https://www.elastic.co/guide/en/elasticsearch/reference/7.3/watcher-api-put-watch.html
 
 
-cdn
+
 
  

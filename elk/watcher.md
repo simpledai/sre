@@ -7,7 +7,9 @@ https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html#watcher-create-thresh
 
 
 通过帮助手册我们可以看到我们可以创建两种类型的watcher
-一种是比较简单的叫做 th
+一种是比较简单的叫做 threshold watch （入门级的watch）
+还有一种是advanced watch （高级的）
 
-一个最简单的例子：
+一个最简单的入门级例子：
+
 

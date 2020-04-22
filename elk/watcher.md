@@ -103,7 +103,8 @@ https://www.elastic.co/guide/en/elasticsearch/reference/7.3/actions-email.html#c
 Watcher can send email using any SMTP email service.
 
 
-我们打开email
+我们打开email，添加如下信息：
+
 xpack.notification.email.account:
     new4g_account:
         profile: new4g
@@ -115,3 +116,4 @@ xpack.notification.email.account:
             user: dailiang@new4g.cn
 
 
+但是你会

@@ -5,5 +5,8 @@ https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html
 
 https://www.elastic.co/guide/en/kibana/7.3/watcher-ui.html#watcher-create-threshold-alert
 
+
+通过文档
+
 一个最简单的例子：
 

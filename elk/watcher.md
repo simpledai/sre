@@ -116,4 +116,4 @@ xpack.notification.email.account:
             user: dailiang@new4g.cn
 
 
-但是你会
+但是你会发现我们没有在配置文件中设置密码对吧

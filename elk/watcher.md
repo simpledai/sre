@@ -95,5 +95,5 @@ PUT _watcher/watch/test
   }
 }
 
-我们看到
+但是发邮件之前需要在xpack设置一下
  

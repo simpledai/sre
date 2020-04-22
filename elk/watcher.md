@@ -48,7 +48,52 @@ https://www.elastic.co/guide/en/elasticsearch/reference/7.3/watcher-api-put-watc
 
 
 
+创建一个watcher
+PUT _watcher/watch/test
+{
+  "trigger" : {
+    "schedule" : { "interval" : "60s" } 
+  },
+  "input" : {
+    "search" : {
+      "request" : {
+        "indices" : [
+          "pr-corporbank-*"
+        ],
+        "body" : {
+          "query" : {
+            "bool" : {
+              "must" : {
+                "match": {
+                   "Level": "error"
+                }
+              },
+              "filter" : {
+                "range": {
+                  "@timestamp": {
+                    "from": "{{ctx.trigger.scheduled_time}}||-5m",
+                    "to": "{{ctx.trigger.triggered_time}}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "condition" : {
+    "compare" : { "ctx.payload.hits.total" : { "gt" : 0 }}
+  },
+  "actions" : {
+    "email_admin" : {
+      "email" : {
+        "to" : "dailiang@new4g.cn",
+        "subject" : "pr-coprbank hit error message"
+      }
+    }
+  }
+}
 
-
-
+我们看到
  

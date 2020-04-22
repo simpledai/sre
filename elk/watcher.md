@@ -37,14 +37,14 @@ This history keeps track of each time a watch is triggered and records the resul
 还有一种是advanced watch （高级的）
 
 
-
-
-
 简单的太简单，甚至不能处理一些查询字段的关键字报警的操作，我们直接来用advanced watch
 
 
 一个advanced watch 实际上是使用的  ** PUT watch API **
 https://www.elastic.co/guide/en/elasticsearch/reference/7.3/watcher-api-put-watch.html
+
+删除一个watcher
+DELETE _watcher/watch/log_error_watch
 
 
 

@@ -25,7 +25,10 @@ A condition that determines whether or not to execute the actions. You can use s
 4.Actions
 One or more actions, such as sending email, pushing data to 3rd party systems through a webhook, or indexing the results of the query.
 
-A full history of all watches is maintained in an Elasticsearch index. This history keeps track of each time a watch is triggered and records the results from the query, whether the condition was met, and what actions were taken.
+A full history of all watches is maintained in an Elasticsearch index. 
+This history keeps track of each time a watch is triggered and records the results from the query, ** whether the condition was met, and what actions were taken. **
+最后所有watch的记录都会被记录到
+
 
 
 通过帮助手册我们可以看到我们可以创建两种类型的watcher

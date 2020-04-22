@@ -12,18 +12,28 @@ A watch describes a single alert and can contain multiple notification actions
 
 A watch is constructed from four simple building blocks:
 一个watch 是由以下几个部分组成的：
-Schedule
+
+1.Schedule
 A schedule for running a query and checking the condition.
-Query
+
+2.Query
 The query to run as input to the condition. Watches support the full Elasticsearch query language, including aggregations.
-Condition
+
+3.Condition
 A condition that determines whether or not to execute the actions. You can use simple conditions (always true), or use scripting for more sophisticated scenarios.
-Actions
+
+4.Actions
 One or more actions, such as sending email, pushing data to 3rd party systems through a webhook, or indexing the results of the query.
+
+A full history of all watches is maintained in an Elasticsearch index. This history keeps track of each time a watch is triggered and records the results from the query, whether the condition was met, and what actions were taken.
+
 
 通过帮助手册我们可以看到我们可以创建两种类型的watcher
 一种是比较简单的叫做 threshold watch （入门级的watch）
 还有一种是advanced watch （高级的）
+
+
+
 
 简单的太简单，甚至不能处理一些查询字段的关键字报警的操作，我们直接来用advanced watch
 

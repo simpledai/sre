@@ -27,7 +27,8 @@ One or more actions, such as sending email, pushing data to 3rd party systems th
 
 A full history of all watches is maintained in an Elasticsearch index. 
 This history keeps track of each time a watch is triggered and records the results from the query, ** whether the condition was met, and what actions were taken. **
-最后所有watch的记录都会被记录到
+最后所有watch的记录都会被记录到一个index中，不论是否匹配规则
+
 
 
 

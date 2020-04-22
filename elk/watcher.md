@@ -97,5 +97,7 @@ PUT _watcher/watch/test
 }
 
 但是发邮件之前需要在xpack设置一下邮箱相关
-
+可以参考
+https://www.elastic.co/guide/en/elasticsearch/reference/7.3/actions-email.html#configuring-email
  
+Watcher can send email using any SMTP email service.
